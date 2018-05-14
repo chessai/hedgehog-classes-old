@@ -1,0 +1,40 @@
+name: hedgehog-classes
+version: 0.4.10
+synopsis: Hedgehog common typeclasses
+description:
+  This library provides Hedgehog properties to ensure
+  that typeclass instances adhere to the set of laws that
+  they are supposed to. There are other libraries that do
+  similar things, such as `genvalidity-hspec` and `checkers`.
+  This library differs from other solutions by not introducing
+  any new typeclasses that the user needs to learn.
+homepage: https://github.com/andrewthad/quickcheck-classes#readme
+license: BSD3
+license-file: LICENSE
+author: Andrew Martin
+maintainer: andrew.thaddeus@gmail.com
+copyright: 2018 Andrew Martin
+category: Testing
+build-type: Simple
+extra-source-files: README.md
+cabal-version: >=1.10
+extra-source-files: changelog.md
+
+library
+  hs-source-dirs: src
+  exposed-modules:
+    Test.Hedgehog.Classes
+    Test.Hedgehog.Properties
+  other-modules:
+    Test.Hedgehog.Classes.Bits 
+    Test.Hedgehog.Classes.Eq
+    Test.Hedgehog.Classes.Monoid
+    Test.Hedgehog.Classes.Ord
+    Test.Hedgehog.Classes.Semigroup 
+  build-depends:
+      base >= 4.5 && < 5
+    , bifunctors 
+    , hedgehog
+    , semigroupoids
+    , semigroups
+  default-language: Haskell2010
