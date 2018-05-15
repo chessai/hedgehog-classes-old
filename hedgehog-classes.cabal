@@ -28,6 +28,8 @@ library
   other-modules:
     Test.Hedgehog.Classes.Bits 
     Test.Hedgehog.Classes.Eq
+    Test.Hedgehog.Classes.Integral 
+    Test.Hedgehog.Classes.IsList 
     Test.Hedgehog.Classes.Monoid
     Test.Hedgehog.Classes.Ord
     Test.Hedgehog.Classes.Semigroup 
